@@ -1,0 +1,13 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php)
+RewriteRule ^beranda index.php?page=home [L]
+
+RewriteRule ^tentang$ index.php?page=about [L]
+RewriteRule ^berita$ index.php?page=berita [L]
+RewriteRule ^kegiatan$ index.php?page=kegiatan [L]
+RewriteRule ^detail_kegiatan-(.*)$ index.php?page=detail_kegiatan&slug=$1 [L]
+RewriteRule ^detail_berita-(.*)$ index.php?page=detail_berita&slug=$1 [L]
+RewriteRule ^jenis-berita-(.*)$ index.php?page=berita&kategori=$1 [L]
+RewriteRule ^kontak$ index.php?page=kontak [L]
+
+Options All -Indexes
